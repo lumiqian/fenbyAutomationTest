@@ -30,6 +30,7 @@ public class FenbyRegistrationTest {
     private String expectedErrorMessageForPasswordTooShort = "Ensure this value has at least 3 characters";
 
     @Test
+    /*Postive case 1: register successfully*/
     public void registerSuccess(){
         System.setProperty("webdriver.gecko.driver", "/Users/yuqian/Documents/Tools/geckodriver");
         driver = new FirefoxDriver();
@@ -192,8 +193,8 @@ public class FenbyRegistrationTest {
     }
 
     @Test
-    /*Negative case 6: register with a password which doesn't conform to the rules, aka. less than 3 characters*/
-    public void passwordNotConformingToRules(){
+    /*Negative case 7: register with a password which doesn't conform to the rules, aka. less than 3 characters*/
+    public void passordNotConformingToRules(){
         System.setProperty("webdriver.gecko.driver", "/Users/yuqian/Documents/Tools/geckodriver");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
